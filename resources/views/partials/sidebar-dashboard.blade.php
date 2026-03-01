@@ -3,7 +3,7 @@
         <div class="sidebar-header position-relative">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="logo">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('dashboard.index') }}">
                         <img src="{{ asset('assets/compiled/svg/logo.svg') }}" alt="Logo">
                     </a>
                 </div>
@@ -49,16 +49,15 @@
                 {{-- ========== UTAMA ========== --}}
                 <li class="sidebar-title">Utama</li>
 
-                <li class="sidebar-item {{ Request::is('dashboard') ? 'active' : '' }}">
-                    <a href="{{ route('dashboard') }}" class="sidebar-link">
+                <li class="sidebar-item {{ $titleSidebar == 'Dashboard' ? 'active' : '' }}">
+                    <a href="{{ route('dashboard.index') }}" class="sidebar-link">
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
-                {{-- ========== PROYEK ========== --}}
+                {{-- ========== PROYEK ==========
                 <li class="sidebar-title">Proyek</li>
-
                 <li class="sidebar-item {{ $title == 'Proyek Page' ? 'active' : '' }}">
                     <a href="" class="sidebar-link">
                         <i class="bi bi-building"></i>
@@ -91,7 +90,7 @@
                     </ul>
                 </li>
 
-                {{-- ========== SDM / PEKERJA ========== --}}
+                {{-- ========== SDM / PEKERJA ========== -
                 <li class="sidebar-title">SDM & Pekerja</li>
 
                 <li class="sidebar-item {{ Request::is('pekerja*') ? 'active' : '' }}">
@@ -126,7 +125,7 @@
                     </ul>
                 </li>
 
-                {{-- ========== KEUANGAN ========== --}}
+                {{-- ========== KEUANGAN ==========
                 <li class="sidebar-title">Keuangan</li>
 
                 <li class="sidebar-item has-sub {{ Request::is('upah*') ? 'active' : '' }}">
@@ -168,7 +167,7 @@
                     </ul>
                 </li>
 
-                {{-- ========== LAPORAN ========== --}}
+                {{-- ========== LAPORAN ========== -
                 <li class="sidebar-title">Laporan</li>
 
                 <li class="sidebar-item has-sub {{ Request::is('laporan*') ? 'active' : '' }}">
@@ -192,7 +191,7 @@
                     </ul>
                 </li>
 
-                {{-- ========== NOTIFIKASI ========== --}}
+                {{-- ========== NOTIFIKASI ==========
                 <li class="sidebar-title">Notifikasi</li>
 
                 <li class="sidebar-item {{ Request::is('notifikasi*') ? 'active' : '' }}">
@@ -200,11 +199,11 @@
                         <i class="bi bi-bell-fill"></i>
                         <span>Semua Notifikasi</span>
                         {{-- Contoh badge notifikasi belum dibaca --}}
-                        <span class="badge bg-danger ms-auto">5</span>
+                        {{-- <span class="badge bg-danger ms-auto">5</span>
                     </a>
-                </li>
+                </li> --}}
 
-                {{-- ========== PENGATURAN ========== --}}
+                 {{-- ========== PENGATURAN ==========
                 <li class="sidebar-title">Pengaturan</li>
 
                 <li class="sidebar-item has-sub {{ Request::is('pengguna*') ? 'active' : '' }}">
@@ -227,7 +226,7 @@
                         <i class="bi bi-gear-fill"></i>
                         <span>Pengaturan Aplikasi</span>
                     </a>
-                </li>
+                </li> --}}
 
             </ul>
         </div>

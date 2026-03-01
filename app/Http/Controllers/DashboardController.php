@@ -8,6 +8,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('pages.dashboard.index');
+        $data['titleSidebar'] = 'Dashboard';
+        $data['titlePage'] = 'Dashboard Mandor';
+        return view('pages.dashboard.index',$data);
     }
 }

@@ -23,6 +23,8 @@
 <script src="{{ asset('assets/static/js/components/dark.js') }}"></script>
 <script src="{{ asset('assets/static/js/components/dark.js') }}"></script>
 
+@stack('scripts');
+
 </body>
 
 </html>

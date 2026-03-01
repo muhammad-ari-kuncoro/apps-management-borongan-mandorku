@@ -12,7 +12,9 @@ class ProyekDataController extends Controller
      */
     public function index()
     {
-        //
+        $data['titleSidebar'] = 'Proyek';
+        $data['titlePage'] = 'Proyek Page';
+        return view('pages.proyek.index',$data);
     }
 
     /**

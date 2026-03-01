@@ -7,7 +7,7 @@
     {{-- ===== HEADER ===== --}}
     <div class="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-3">
         <div>
-            <h4 class="fw-bold mb-1">Dashboard Mandor</h4>
+            <h4 class="fw-bold mb-1">{{$titlePage}}</h4>
             <p class="text-muted small mb-0">Selamat datang, {{ auth()->user()->name ?? 'Owner' }} — ringkasan hari ini</p>
         </div>
         <div class="d-flex align-items-center gap-2 border rounded px-3 py-2 small text-muted">
