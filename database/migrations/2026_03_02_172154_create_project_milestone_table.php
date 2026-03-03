@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('project_milestones', function (Blueprint $table) {
+        Schema::create('project_milestone', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('project_id')->unsigned()->nullable();
-            $table->foreign("project_id")->references("id")->on("tb_proyeks");
+            $table->foreign("project_id")->references("id")->on("project");
             $table->string('name_project_mls');
             $table->date('date_target');
             $table->string('finish_date_target');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('project_milestones');
+        Schema::dropIfExists('project_milestone');
     }
 };

@@ -2,20 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ProyekData;
-use App\Models\User;
 use Illuminate\Http\Request;
 
-class ProyekDataController extends Controller
+class ManPowerProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data['titleSidebar'] = 'Proyek';
-        $data['titlePage'] = 'Proyek Page';
-        return view('pages.proyek.index',$data);
+
     }
 
     /**
@@ -23,10 +19,7 @@ class ProyekDataController extends Controller
      */
     public function create()
     {
-        $data['dataMandor'] = ProyekData::with(['mandor','milestones','teams'])->get();
-        $data['titlePage']  = 'Proyek Page';
-        $data['titleSidebar'] = 'Proyek';
-        return view('pages.proyek.create',$data);
+        //
     }
 
     /**
@@ -40,7 +33,7 @@ class ProyekDataController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ProyekData $proyekData)
+    public function show(string $id)
     {
         //
     }
@@ -48,7 +41,7 @@ class ProyekDataController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ProyekData $proyekData)
+    public function edit(string $id)
     {
         //
     }
@@ -56,7 +49,7 @@ class ProyekDataController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ProyekData $proyekData)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -64,7 +57,7 @@ class ProyekDataController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ProyekData $proyekData)
+    public function destroy(string $id)
     {
         //
     }

@@ -11,21 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tb_proyeks', function (Blueprint $table) {
+        Schema::create('project', function (Blueprint $table) {
             $table->id();
             $table->string('code_project')->unique();
+            $table->bigInteger('foreman_id')->unsigned()->nullable();
+            $table->foreign("foreman_id")->references("id")->on("project_foreman");
             $table->string('name_project');
             $table->string('type_project');
             $table->string('name_client');
             $table->string('pic_client');
             $table->string('location_project');
             $table->date('start_date_project');
-            $table->date('end_date_project')->nullable();
+            $table->date('end_date_plan_project');
+            $table->date('end_date_actual')->nullable();
             $table->unsignedBigInteger('progress')->default(0);
             $table->enum('status', ['draft','active','deadline','done','cancel'])->default('draft');
-            $table->bigInteger('nilai_kontrak')->default(0);
-            $table->bigInteger('mandor_id')->unsigned()->nullable();
-            $table->foreign("mandor_id")->references("id")->on("users");
+            $table->bigInteger('contract_value')->default(0);
             $table->text('notes')->nullable();
             $table->timestamps();
             $table->softDeletes();
@@ -37,6 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tb_proyeks');
+        Schema::dropIfExists('project');
     }
 };
