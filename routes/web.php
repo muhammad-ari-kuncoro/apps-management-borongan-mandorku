@@ -22,23 +22,27 @@ Route::get('/', function () {
 // });
 
 Route::prefix('proyek')->middleware(['auth', 'verified'])->group(function (){
-      Route::get('/',           [ProyekDataController::class, 'index'])->name('proyek.index');
-      Route::get('/create',     [ProyekDataController::class, 'create'])->name('proyek.create');
-      Route::post('/store',     [ProyekDataController::class, 'store'])->name('proyek.store');
+      Route::get('/',                       [ProyekDataController::class, 'index'])->name('proyek.index');
+      Route::get('/create',                 [ProyekDataController::class, 'create'])->name('proyek.create');
+      Route::post('/store',                 [ProyekDataController::class, 'store'])->name('proyek.store');
 });
 
 Route::prefix('foreman')->middleware(['auth', 'verified'])->group(function (){
-      Route::get('/',            [ForemanProjectController::class, 'index'])->name('foreman.index');
-      Route::get('/create',      [ForemanProjectController::class, 'create'])->name('foreman.create');
-      Route::post('/store',      [ForemanProjectController::class, 'store'])->name('foreman.store');
-      Route::get('/edit/{id}',   [ForemanProjectController::class, 'edit'])->name('foreman.edit');
-      Route::put('/update/{id}', [ForemanProjectController::class, 'update'])->name('foreman.update');
+      Route::get('/',                       [ForemanProjectController::class, 'index'])->name('foreman.index');
+      Route::get('/create',                 [ForemanProjectController::class, 'create'])->name('foreman.create');
+      Route::post('/store',                 [ForemanProjectController::class, 'store'])->name('foreman.store');
+      Route::get('/edit/{id}',              [ForemanProjectController::class, 'edit'])->name('foreman.edit');
+      Route::put('/update/{id}',            [ForemanProjectController::class, 'update'])->name('foreman.update');
       Route::delete('/delete/foreman/{id}', [ForemanProjectController::class, 'destroy'])->name('foreman.delete');
 });
 
+
 Route::prefix('manpower')->middleware(['auth','verified'])->group(function (){
-      Route::get('/',           [ManPowerProjectController::class, 'index'])->name('manpower.index');
-      Route::get('/create',     [ManPowerProjectController::class, 'create'])->name('manpower.create');
+      Route::get('/',                       [ManPowerProjectController::class, 'index'])->name('manpower.index');
+      Route::get('/create',                 [ManPowerProjectController::class, 'create'])->name('manpower.create');
+      Route::post('/store',                 [ManPowerProjectController::class, 'store'])->name('manpower.store');
+      Route::get('/edit/{id}',              [ManPowerProjectController::class, 'edit'])->name('manpower.edit');
+      Route::put('/update/{id}',            [ManPowerProjectController::class, 'update'])->name('manpower.update');
 });
 
 

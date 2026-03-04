@@ -18,7 +18,7 @@ class ProjectManPower extends Model
         'no_phone',
         'address',
         'gender',
-        'spesilist',
+        'spesialist',
         'age',
         'join_date',
         'terminate_date',

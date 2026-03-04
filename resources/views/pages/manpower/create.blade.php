@@ -14,7 +14,7 @@
             </a>
         </div>
 
-        @include('layouts.flash-data');
+        @include('layouts.flash-data')
         <form action="{{ route('manpower.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row g-4">

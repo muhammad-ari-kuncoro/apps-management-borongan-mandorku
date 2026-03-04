@@ -65,9 +65,9 @@
                         <li class="submenu-item {{ $titleSidebar == 'Foreman Page' ? 'active' : '' }}">
                             <a href="{{ route('foreman.index') }}" class="submenu-link">Foreman</a>
                         </li>
-                        {{-- <li class="submenu-item {{ $titleSidebar == 'Manpower Page' ? 'active' : '' }}">
+                        <li class="submenu-item {{ $titleSidebar == 'Manpower Page' ? 'active' : '' }}">
                             <a href="{{ route('manpower.index') }}" class="submenu-link">Manpower</a>
-                        </li> --}}
+                        </li>
                     </ul>
                 </li>
                 {{-- MENU PROYEK --}}

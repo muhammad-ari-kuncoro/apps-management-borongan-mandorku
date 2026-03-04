@@ -117,7 +117,7 @@ class ForemanProjectController extends Controller
 
         return redirect()->route('foreman.index')->with('success', 'Mandor berhasil dinonaktifkan.');
         } catch (\Throwable $th) {
-            return redirect()->back()->with('error', 'Error Cant delete');
+            return redirect()->back()->with('error', 'Error Can Delete');
         }
     }
 }
